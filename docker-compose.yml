@@ -1,0 +1,13 @@
+version: "10.0"
+services:
+  service:
+    image: "my_image:latest"
+    command: "python3 /usr/src/app/main.py"
+    environment:
+      - API_TOKEN=${API_TOKEN}
+  box:
+    image: "python:3"
+networks:
+  default:
+    name: bridge-nerwork
+    external: true
